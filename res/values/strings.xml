@@ -1,0 +1,209 @@
+<resources>
+
+    <string name="app_name">アビス-Abyss-</string>
+    <string name="title_button_label">Game Start</string>
+    <string name="hello">Hello World, seriftestActivity!</string>
+
+    <!-- 【禁則文字の設定】 -->
+    <!-- 下記の文字が行頭に来る場合、下記文字の一個前の文字を行頭に持ってきます。 -->
+    <string name="hyphenationString">,)]｝、〕〉》」』】〙〗〟’”»ヽヾーァィゥェォッャュョヮヵヶぁぃぅぇぉっゃゅょゎ々‐–〜?!‼・:;。.</string>
+
+    <!-- 【セリフ文字の設定】                                                         -->
+    <!-- \nで改行、$pで改ページ指定ができます。                                       -->
+    <!-- $gで段落終了指定ができます。段落終了指定をしておくと、描画時にそこで一時     -->
+    <!-- 停止することができます。                                                     -->
+    <!-- 空行は"スペース + \n"に置換されます。縦書きの時の空行は、androidの仕様により -->
+    <!-- スペースの幅が狭いため、空行の幅も狭くなります。空行の幅を広くしたい場合は   -->
+    <!-- "全角スペース + \n" にすると、文字と同じ幅の空行になります。                 -->
+    
+    <!-- セリフサンプル ルビ有り。                                                    -->
+    <string name="serif1">-カードバトル｜三国志《さんごくし》『｜遠き天命《とおきてんめい》』より\n\n｜漢帝国《かんていこく》は｜衰微《すいび》していた。\n\n｜帝王《ていおう》に｜徳無《とくな》く\n｜百官《ひゃっかん》は｜民衆《みんしゅう》を｜省《かえり》みず\n｜苛政《かせい》は｜大地《だいち》を｜覆《おお》い｜尽《つ》くし\n｜不仁《ふじん》と｜不義《ふぎ》は｜天下《てんか》を覆い尽くしていた。$p184年\n\n｜太平道《たいへいどう》の｜蜂起《ほうき》は漢帝国に｜混乱《こんらん》を\n｜民衆《みんしゅう》に｜刹那《せつな》の｜救《すく》いを\n｜群雄《ぐんゆう》に｜立身《りっしん》の｜機会《きかい》を｜与《あた》えた。$g\n｜大乱《たいらん》は｜鎮圧《ちんあつ》されつつも｜残《のこ》り｜火《び》は｜燻《くすぶ》り\n帝国の｜威信《いしん》は｜地《ち》に｜落《お》ちたが\n群雄達の｜声望《せいぼう》は｜中原《ちゅうげん》に｜鳴《な》り｜響《ひび》いた。$g\nもはや漢帝国の｜運命《うんめい》は｜極《きわ》まった。\n｜天命《てんめい》を｜革《あらた》めるべき時がきたのだ。$g\n\n｜時代《じだい》は｜動乱《どうらん》と｜闘争《とうそう》の｜荒海《あらうみ》へ\n大きく｜舵《かじ》を切り$g\n｜寵児達《ちょうじたち》はその｜果《は》てに｜自《みずか》らの｜夢《ゆめ》と｜野望《やぼう》を｜見《み》いだしていた。</string>
+    <!-- セリフサンプル ルビ無し。                                                    -->
+    <!-- <string name="serif1">-カードバトル三国志『遠き天命』より\n\n漢帝国は衰微していた。\n\n帝王に徳無く\n百官は民衆を省みず\n苛政は大地を覆い尽くし\n不仁と不義は天下を覆い尽くしていた。$p184年\n\n太平道の蜂起は漢帝国に混乱を\n民衆に刹那の救いを\n群雄に立身の機会を与えた。$g\n大乱は鎮圧されつつも残り火は燻り\n帝国の威信は地に落ちたが\n群雄達の声望は中原に鳴り響いた。$g\nもはや漢帝国の運命は極まった。\n天命を革めるべき時がきたのだ。$g\n\n時代は動乱と闘争の荒海へ\n大きく舵を切り$g\n寵児達はその果てに自らの夢と野望を見いだしていた。</string> -->
+    
+    <!-- 【ルビ指定文字】                                                           -->
+    <!-- 文中のルビ指定区切り文字を指定する。                                       -->
+    <!-- 下記記号は青空文庫および視覚障碍者読書支援協会（BBA）での指定文字サンプル  -->
+    <!-- 指定例：表意文字である｜漢字《かんじ》にルビを振る  以上 wikipediaより     -->
+    <!-- 親文字開始指定文字・ルビ指定括弧FROM・TOの順で指定する。                   -->
+    <string name="rubyPuctuation">｜《》</string>
+    
+    <!-- 【文字エフェクタによる縦書フォント補正】                                   -->
+    <!-- 縦書きの時に位置がずれる文字は、文字エフェクタで補正します。               -->
+    <!-- 指定形式1:対象文字, 回転角度, X補正値, y補正値                             -->
+    <!-- 指定形式2:対象文字, 回転角度, X補正値, y補正値 の反復繰り返し	            -->
+    <!--                                                                            -->
+    <!-- いずれもカンマ区切り、スペースは無視されます。                             -->
+    <!-- 対象文字：補正対象の文字。                                                 -->
+    <!-- 回転角度：回転する角度。正で右回り、負で左回りに回転                       -->
+    <!-- X補正値：X座標位置を補正します。正で右に、負で左に補正。                   -->
+    <!-- Y補正値：Y座標位置を補正します。正で下に、負で上に補正。                   -->
+    <!-- 補正値は1fで一文字ぶん、0.5fで文字の半分の大きさに相当します。             -->
+    <!-- 文字エフェクタにはこの他にビットマップへの置換機能なども実装されています。 -->
+    <!--                                                                            -->
+    <!-- この実装は『明日の鍵』サイト様                                             -->
+    <!-- http://d.hatena.ne.jp/tomorrowkey/                                         -->
+    <!-- の記事『Androidで縦書きを実現する』                                        -->
+    <!-- http://d.hatena.ne.jp/tomorrowkey/20110123/1295747338                      -->
+    <!-- を参考に実装しています。                                                   -->
+    <!-- 有意義なナレッジに大変感謝いたします。                                     -->
+    <!--                                                                            -->
+	<!--                                                                            -->
+	<!-- 下記以降は縦書きの文字補正値のサンプル値です。                             -->
+	<!-- 『明日の鍵』サイト様より許諾を得て転載させていただきます。                 -->    
+	<!--                                                                            -->
+	<!-- 【※重要な注意※】                                                         -->
+	<!-- 下記は特定少数の環境において、文字位置を試験的に補正した際の調整値の       -->
+	<!-- サンプルです。不特定多数の実行環境にて動作確認を行っているわけではなく、   -->               
+	<!-- 確実な補正を保証するものではありません。                                   -->
+	<!-- 利用者の環境・使用しているフォントによっては、位置ずれなどが発生する       -->     
+	<!-- 可能性があります。                                                         -->
+	<!--                                                                            -->
+	<!-- 上記を良く理解された上で、それでも構わないという方は、                     -->
+	<!-- 自己責任においてご利用ください。                                           -->
+	<!--                                                                            -->
+	<!-- ※印のものは、kobadroidが追加・編集しており、オリジナルと異なります。      -->
+	<!--                                                                            -->
+	<!-- 指定形式1 （個別指定）                                                     -->
+    <string name="charEffect001">『,  90.0f, -1.0f, -0.3f</string><!-- ※追加  -->
+    <string name="charEffect002">』,  90.0f, -1.0f,  0.0f</string><!-- ※追加  -->
+    <string name="charEffect003">ー, -90.0f,  0.0f,  0.8f</string><!-- ※変更  -->
+    <string name="charEffect004">、,   0.0f,  0.7f, -0.6f</string>
+    <string name="charEffect005">。,   0.0f,  0.7f, -0.6f</string>
+	<string name="charEffect006">「, 90.0f, -1.0f, -0.3f</string>
+	<string name="charEffect007">」, 90.0f, -1.0f, 0.0f</string>
+	<string name="charEffect008">ぁ, 0.0f, 0.1f, -0.1f</string>
+	<string name="charEffect009">ぃ, 0.0f, 0.1f, -0.1f</string>
+	<string name="charEffect010">ぅ, 0.0f, 0.1f, -0.1f</string>
+	<string name="charEffect011">ぇ, 0.0f, 0.1f, -0.1f</string>
+	<string name="charEffect012">ぉ, 0.0f, 0.1f, -0.1f</string>
+	<string name="charEffect013">っ, 0.0f, 0.1f, -0.1f</string>
+	<string name="charEffect014">ゃ, 0.0f, 0.1f, -0.1f</string>
+	<string name="charEffect015">ゅ, 0.0f, 0.1f, -0.1f</string>
+	<string name="charEffect016">ょ, 0.0f, 0.1f, -0.1f</string>
+	<string name="charEffect017">ァ, 0.0f, 0.1f, -0.1f</string>
+	<string name="charEffect018">ィ, 0.0f, 0.1f, -0.1f</string>
+	<string name="charEffect019">ゥ, 0.0f, 0.1f, -0.1f</string>
+	<string name="charEffect020">ェ, 0.0f, 0.1f, -0.1f</string>
+	<string name="charEffect021">ォ, 0.0f, 0.1f, -0.1f</string>
+	<string name="charEffect022">ッ, 0.0f, 0.1f, -0.1f</string>
+	<string name="charEffect023">ャ, 0.0f, 0.1f, -0.1f</string>
+	<string name="charEffect024">ュ, 0.0f, 0.1f, -0.1f</string>
+	<string name="charEffect025">ョ, 0.0f, 0.1f, -0.1f</string>
+	<string name="charEffect026">a, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect027">b, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect028">c, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect029">d, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect030">e, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect031">f, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect032">g, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect033">h, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect034">i, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect035">j, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect036">k, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect037">l, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect038">m, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect039">n, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect040">o, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect041">p, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect042">q, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect043">r, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect044">s, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect045">t, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect046">u, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect047">v, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect048">w, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect049">x, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect050">y, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect051">z, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect052">A, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect053">B, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect054">C, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect055">D, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect056">E, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect057">F, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect058">G, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect059">H, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect060">I, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect061">J, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect062">K, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect063">L, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect064">M, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect065">N, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect066">O, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect067">P, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect068">Q, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect069">R, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect070">S, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect071">T, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect072">U, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect073">V, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect074">W, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect075">X, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect076">Y, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect077">Z, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect078">ａ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect079">ｂ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect080">ｃ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect081">ｄ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect082">ｅ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect083">ｆ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect084">ｇ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect085">ｈ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect086">ｉ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect087">ｊ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect088">ｋ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect089">ｌ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect090">ｍ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect091">ｎ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect092">ｏ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect093">ｐ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect094">ｑ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect095">ｒ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect096">ｓ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect097">ｔ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect098">ｕ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect099">ｖ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect100">ｗ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect101">ｘ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect102">ｙ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect103">ｚ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect104">Ａ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect105">Ｂ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect106">Ｃ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect107">Ｄ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect108">Ｅ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect109">Ｆ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect110">Ｇ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect111">Ｈ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect112">Ｉ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect113">Ｊ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect114">Ｋ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect115">Ｌ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect116">Ｍ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect117">Ｎ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect118">Ｏ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect119">Ｐ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect120">Ｑ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect121">Ｒ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect122">Ｓ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect123">Ｔ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect124">Ｕ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect125">Ｖ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect126">Ｗ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect127">Ｘ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect128">Ｙ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect129">Ｚ, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect130">：, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect131">；, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect132">／, 90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect133">:,  90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect134">;,  90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect135">/,  90.0f, 0.0f, -0.1f</string>
+	<string name="charEffect136">.,  90.0f, 0.0f, -0.1f</string>
+    <string name="charEffect137">（, 90.0f,-1.0f,  0.0f</string><!-- ※追加  -->
+    <string name="charEffect138">）, 90.0f,-1.0f,  0.0f</string><!-- ※追加  -->
+	<!-- 指定形式2 （一括指定）                                         -->
+	<string name="charEffects">『,  90.0f, -1.0f, -0.3f,』,  90.0f, -1.0f,  0.0f,ー, -90.0f,  0.0f,  0.8f,、,   0.0f,  0.7f, -0.6f,。,   0.0f,  0.7f, -0.6f,「, 90.0f, -1.0f, -0.3f,」, 90.0f, -1.0f, 0.0f,ぁ, 0.0f, 0.1f, -0.1f,ぃ, 0.0f, 0.1f, -0.1f,ぅ, 0.0f, 0.1f, -0.1f,ぇ, 0.0f, 0.1f, -0.1f,ぉ, 0.0f, 0.1f, -0.1f,っ, 0.0f, 0.1f, -0.1f,ゃ, 0.0f, 0.1f, -0.1f,ゅ, 0.0f, 0.1f, -0.1f,ょ, 0.0f, 0.1f, -0.1f,ァ, 0.0f, 0.1f, -0.1f,ィ, 0.0f, 0.1f, -0.1f,ゥ, 0.0f, 0.1f, -0.1f,ェ, 0.0f, 0.1f, -0.1f,ォ, 0.0f, 0.1f, -0.1f,ッ, 0.0f, 0.1f, -0.1f,ャ, 0.0f, 0.1f, -0.1f,ュ, 0.0f, 0.1f, -0.1f,ョ, 0.0f, 0.1f, -0.1f,a, 90.0f, 0.0f, -0.1f,b, 90.0f, 0.0f, -0.1f,c, 90.0f, 0.0f, -0.1f,d, 90.0f, 0.0f, -0.1f,e, 90.0f, 0.0f, -0.1f,f, 90.0f, 0.0f, -0.1f,g, 90.0f, 0.0f, -0.1f,h, 90.0f, 0.0f, -0.1f,i, 90.0f, 0.0f, -0.1f,j, 90.0f, 0.0f, -0.1f,k, 90.0f, 0.0f, -0.1f,l, 90.0f, 0.0f, -0.1f,m, 90.0f, 0.0f, -0.1f,n, 90.0f, 0.0f, -0.1f,o, 90.0f, 0.0f, -0.1f,p, 90.0f, 0.0f, -0.1f,q, 90.0f, 0.0f, -0.1f,r, 90.0f, 0.0f, -0.1f,s, 90.0f, 0.0f, -0.1f,t, 90.0f, 0.0f, -0.1f,u, 90.0f, 0.0f, -0.1f,v, 90.0f, 0.0f, -0.1f,w, 90.0f, 0.0f, -0.1f,x, 90.0f, 0.0f, -0.1f,y, 90.0f, 0.0f, -0.1f,z, 90.0f, 0.0f, -0.1f,A, 90.0f, 0.0f, -0.1f,B, 90.0f, 0.0f, -0.1f,C, 90.0f, 0.0f, -0.1f,D, 90.0f, 0.0f, -0.1f,E, 90.0f, 0.0f, -0.1f,F, 90.0f, 0.0f, -0.1f,G, 90.0f, 0.0f, -0.1f,H, 90.0f, 0.0f, -0.1f,I, 90.0f, 0.0f, -0.1f,J, 90.0f, 0.0f, -0.1f,K, 90.0f, 0.0f, -0.1f,L, 90.0f, 0.0f, -0.1f,M, 90.0f, 0.0f, -0.1f,N, 90.0f, 0.0f, -0.1f,O, 90.0f, 0.0f, -0.1f,P, 90.0f, 0.0f, -0.1f,Q, 90.0f, 0.0f, -0.1f,R, 90.0f, 0.0f, -0.1f,S, 90.0f, 0.0f, -0.1f,T, 90.0f, 0.0f, -0.1f,U, 90.0f, 0.0f, -0.1f,V, 90.0f, 0.0f, -0.1f,W, 90.0f, 0.0f, -0.1f,X, 90.0f, 0.0f, -0.1f,Y, 90.0f, 0.0f, -0.1f,Z, 90.0f, 0.0f, -0.1f,ａ, 90.0f, 0.0f, -0.1f,ｂ, 90.0f, 0.0f, -0.1f,ｃ, 90.0f, 0.0f, -0.1f,ｄ, 90.0f, 0.0f, -0.1f,ｅ, 90.0f, 0.0f, -0.1f,ｆ, 90.0f, 0.0f, -0.1f,ｇ, 90.0f, 0.0f, -0.1f,ｈ, 90.0f, 0.0f, -0.1f,ｉ, 90.0f, 0.0f, -0.1f,ｊ, 90.0f, 0.0f, -0.1f,ｋ, 90.0f, 0.0f, -0.1f,ｌ, 90.0f, 0.0f, -0.1f,ｍ, 90.0f, 0.0f, -0.1f,ｎ, 90.0f, 0.0f, -0.1f,ｏ, 90.0f, 0.0f, -0.1f,ｐ, 90.0f, 0.0f, -0.1f,ｑ, 90.0f, 0.0f, -0.1f,ｒ, 90.0f, 0.0f, -0.1f,ｓ, 90.0f, 0.0f, -0.1f,ｔ, 90.0f, 0.0f, -0.1f,ｕ, 90.0f, 0.0f, -0.1f,ｖ, 90.0f, 0.0f, -0.1f,ｗ, 90.0f, 0.0f, -0.1f,ｘ, 90.0f, 0.0f, -0.1f,ｙ, 90.0f, 0.0f, -0.1f,ｚ, 90.0f, 0.0f, -0.1f,Ａ, 90.0f, 0.0f, -0.1f,Ｂ, 90.0f, 0.0f, -0.1f,Ｃ, 90.0f, 0.0f, -0.1f,Ｄ, 90.0f, 0.0f, -0.1f,Ｅ, 90.0f, 0.0f, -0.1f,Ｆ, 90.0f, 0.0f, -0.1f,Ｇ, 90.0f, 0.0f, -0.1f,Ｈ, 90.0f, 0.0f, -0.1f,Ｉ, 90.0f, 0.0f, -0.1f,Ｊ, 90.0f, 0.0f, -0.1f,Ｋ, 90.0f, 0.0f, -0.1f,Ｌ, 90.0f, 0.0f, -0.1f,Ｍ, 90.0f, 0.0f, -0.1f,Ｎ, 90.0f, 0.0f, -0.1f,Ｏ, 90.0f, 0.0f, -0.1f,Ｐ, 90.0f, 0.0f, -0.1f,Ｑ, 90.0f, 0.0f, -0.1f,Ｒ, 90.0f, 0.0f, -0.1f,Ｓ, 90.0f, 0.0f, -0.1f,Ｔ, 90.0f, 0.0f, -0.1f,Ｕ, 90.0f, 0.0f, -0.1f,Ｖ, 90.0f, 0.0f, -0.1f,Ｗ, 90.0f, 0.0f, -0.1f,Ｘ, 90.0f, 0.0f, -0.1f,Ｙ, 90.0f, 0.0f, -0.1f,Ｚ, 90.0f, 0.0f, -0.1f,：, 90.0f, 0.0f, -0.1f,；, 90.0f, 0.0f, -0.1f,／, 90.0f, 0.0f, -0.1f,:,  90.0f, 0.0f, -0.1f,;,  90.0f, 0.0f, -0.1f,/,  90.0f, 0.0f, -0.1f,.,  90.0f, 0.0f, -0.1f,（, 90.0f,-1.0f,  0.0f,）, 90.0f,-1.0f,  0.0f</string>    
+    
+</resources>

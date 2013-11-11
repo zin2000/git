@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_centerHorizontal="true"
+>
+
+<LinearLayout 
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+>
+<LinearLayout 
+  android:orientation="horizontal"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:layout_weight="1"
+>
+<ImageView
+        android:id="@+id/imageWindowViewUp"
+        android:layout_weight="0"
+	    android:layout_width="0dp"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical"
+	    android:alpha="0"
+	    >
+</ImageView>
+
+<SurfaceView android:id="@+id/imageMainView1"
+android:layout_width="wrap_content"
+android:layout_height="256dip"
+	android:layout_weight="1"
+>
+</SurfaceView>
+
+<ImageView
+        android:id="@+id/imageWindowViewUp"
+        android:layout_weight="0"
+	    android:layout_width="0dp"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical"
+	    android:alpha="0"
+	    >
+</ImageView>
+
+</LinearLayout>
+
+<LinearLayout 
+  android:orientation="horizontal"
+  android:layout_width="fill_parent"
+  android:layout_height="16dp"
+>
+<ImageView android:id="@+id/imageWindowViewLeft"
+android:layout_width="16dp"
+android:layout_height="16dp"
+android:layout_weight="0"
+android:background="@drawable/w_lu"
+/>
+<ImageView
+        android:id="@+id/imageWindowViewUp"
+        android:layout_weight="1"
+	    android:layout_width="wrap_content"
+	    android:layout_height="16dp"
+	    android:orientation="vertical"
+	    android:background="@drawable/w_cu"
+	    >
+</ImageView>
+<ImageView android:id="@+id/imageWindowViewRight"
+android:layout_width="16dp"
+android:layout_height="16dp"
+android:layout_weight="0"
+android:background="@drawable/w_ru"
+/>
+</LinearLayout>
+
+<LinearLayout 
+  android:orientation="horizontal"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:layout_weight="1"
+>
+<ImageView
+        android:id="@+id/imageWindowViewUp"
+        android:layout_weight="0"
+	    android:layout_width="16dp"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical"
+	    android:background="@drawable/window_renga"
+	    >
+</ImageView>
+<ListView
+      android:id="@+id/listView1"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:fastScrollEnabled="true">
+</ListView>
+<ImageView
+        android:id="@+id/imageWindowViweCenter"
+        android:layout_weight="0"
+	    android:layout_width="16dp"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical"
+	    android:background="@drawable/window_renga"
+	    >
+</ImageView>
+<LinearLayout 
+  android:id="@+id/linerMesLog" 
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="fill_parent"
+  android:layout_weight="1"
+  >
+<Button 
+    android:text="アイテム切替" 
+    android:id="@+id/itemChange" 
+    android:layout_height="wrap_content" 
+    android:layout_width="wrap_content"
+    android:layout_weight="0">
+</Button>
+<ScrollView
+    	android:id="@+id/scrollView1"
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent"
+		android:layout_weight="1"
+		android:background="#ff000000"
+		
+    >
+<TextView 
+		android:id="@+id/logMes"
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent"
+		android:layout_weight="1"
+		android:paddingLeft="10dip"
+		android:paddingRight="10dip"
+		android:textColor="#FFFFFF"
+		android:textSize="10dip"
+		android:background="@android:color/black"
+		android:scrollbarAlwaysDrawVerticalTrack="true"
+		android:paddingTop="0dip"
+		android:text=" ">
+</TextView>
+</ScrollView>
+</LinearLayout>
+<ImageView
+        android:id="@+id/imageWindowViewUp"
+        android:layout_weight="0"
+	    android:layout_width="16dp"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical"
+	    android:background="@drawable/window_renga"
+	    >
+</ImageView>
+</LinearLayout>
+<LinearLayout 
+  android:orientation="horizontal"
+  android:layout_width="fill_parent"
+  android:layout_height="16dp"
+>
+<ImageView android:id="@+id/imageWindowViewLeft"
+android:layout_width="16dp"
+android:layout_height="16dp"
+android:layout_weight="0"
+android:background="@drawable/window_renga"
+/>
+<ImageView
+        android:id="@+id/imageWindowViewUp"
+        android:layout_weight="1"
+	    android:layout_width="wrap_content"
+	    android:layout_height="16dp"
+	    android:orientation="vertical"
+	    android:background="@drawable/window_renga"
+	    >
+</ImageView>
+<ImageView android:id="@+id/imageWindowViewRight"
+android:layout_width="16dp"
+android:layout_height="16dp"
+android:layout_weight="0"
+android:background="@drawable/window_renga"
+/>
+</LinearLayout>
+<LinearLayout 
+  android:orientation="horizontal"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:layout_weight="0"
+>
+<ImageView
+        android:id="@+id/imageWindowViewUp"
+	    android:layout_width="16dp"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical"
+	    android:background="@drawable/window_renga"
+	    >
+</ImageView>
+<Button 
+    android:text="宝箱開封" 
+    android:id="@+id/button1" 
+    android:layout_height="wrap_content" 
+    android:layout_width="fill_parent"
+    android:layout_weight="1">
+</Button>
+<Button 
+    android:text="ダンジョン" 
+    android:id="@+id/button2" 
+    android:layout_height="wrap_content" 
+    android:layout_width="fill_parent"
+    android:layout_weight="1">
+</Button>
+<Button 
+    android:text="メニュー" 
+    android:id="@+id/button3" 
+    android:layout_height="wrap_content" 
+    android:layout_width="fill_parent"
+    android:layout_weight="1">
+</Button>
+<ImageView
+        android:id="@+id/imageWindowViewUp"
+	    android:layout_width="16dp"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical"
+	    android:background="@drawable/window_renga"
+	    >
+</ImageView>
+</LinearLayout>
+<LinearLayout 
+  android:orientation="horizontal"
+  android:layout_width="fill_parent"
+  android:layout_height="16dp"
+>
+<ImageView android:id="@+id/window_renga"
+android:layout_width="16dp"
+android:layout_height="16dp"
+android:layout_weight="0"
+android:background="@drawable/window_renga"
+/>
+<ImageView
+        android:id="@+id/imageWindowViewUp"
+        android:layout_weight="1"
+	    android:layout_width="wrap_content"
+	    android:layout_height="16dp"
+	    android:orientation="vertical"
+	    android:background="@drawable/window_renga"
+	    >
+</ImageView>
+<ImageView android:id="@+id/imageWindowViewRight"
+android:layout_width="16dp"
+android:layout_height="16dp"
+android:layout_weight="0"
+android:background="@drawable/window_renga"
+/>
+</LinearLayout>
+</LinearLayout>
+
+<LinearLayout 
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="256dip"
+>
+<LinearLayout 
+  android:orientation="horizontal"
+  android:layout_width="fill_parent"
+  android:layout_height="256dip"
+>
+<SurfaceView android:id="@+id/damageView1"
+android:layout_width="fill_parent"
+android:layout_height="256dip"
+android:layout_weight="1"
+>
+</SurfaceView>
+
+</LinearLayout>
+</LinearLayout>
+<LinearLayout 
+  android:orientation="horizontal"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:layout_centerHorizontal="true"
+>
+	<LinearLayout 
+		android:orientation="vertical"
+		android:layout_width="150dip"
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+	>
+	<ImageView android:id="@+id/lvcll"
+		android:layout_width="150dip"
+		android:layout_height="250dip"
+		android:layout_centerHorizontal="true"
+	>
+	</ImageView>
+	<ImageView android:id="@+id/windowLLeftTop"
+		android:layout_width="150dip"
+		android:layout_height="64dip"
+		android:layout_below="@+id/llvcl"
+		android:layout_toLeftOf="@id/llvcl"
+	>
+	</ImageView>
+		<ImageView android:id="@+id/windowLLeft"
+			android:layout_width="150dip"
+			android:layout_height="64dip"
+			android:layout_alignBottom="@+id/windowLLeftTop"
+			android:layout_below="@+id/windowLLeftTop"
+		>
+		</ImageView>
+		<ImageView android:id="@+id/windowLLeftBottom"
+			android:layout_width="150dip"
+			android:layout_height="64dip"
+			android:layout_centerHorizontal="true"
+			android:layout_below="@+id/windowLLeft"
+		>
+		</ImageView>
+	</LinearLayout>
+	<LinearLayout 
+		android:orientation="vertical"
+		android:layout_width="64dip"
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+	>
+	<ImageView android:id="@+id/lvcl"
+		android:layout_width="64dip"
+		android:layout_height="250dip"
+		android:layout_centerHorizontal="true"
+	>
+	</ImageView>
+	<ImageView android:id="@+id/windowLeftTop"
+		android:layout_width="64dip"
+		android:layout_height="64dip"
+		android:layout_below="@+id/lvcl"
+		android:layout_toLeftOf="@id/lvcl"
+	>
+	</ImageView>
+		<ImageView android:id="@+id/windowLeft"
+			android:layout_width="64dip"
+			android:layout_height="64dip"
+			android:layout_alignBottom="@+id/windowTop"
+			android:layout_below="@+id/windowLeftTop"
+		>
+		</ImageView>
+		<ImageView android:id="@+id/windowLeftBottom"
+			android:layout_width="64dip"
+			android:layout_height="64dip"
+			android:layout_centerHorizontal="true"
+			android:layout_below="@+id/windowLeft"
+		>
+		</ImageView>
+	</LinearLayout>
+	<LinearLayout 
+		android:orientation="vertical"
+		android:layout_width="64dip"
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+	>
+	<ImageView android:id="@+id/lvc"
+		android:layout_width="64dip"
+		android:layout_height="270dip"
+		android:layout_centerHorizontal="true"
+	>
+	</ImageView>
+	<ImageView android:id="@+id/windowTop"
+		android:layout_width="64dip"
+		android:layout_height="64dip"
+		android:layout_below="@+id/lvc"
+		android:layout_toLeftOf="@id/lvc"
+	>
+	</ImageView>
+		<ImageView android:id="@+id/windowCenter"
+			android:layout_width="64dip"
+			android:layout_height="64dip"
+			android:layout_alignBottom="@+id/windowTop"
+			android:layout_below="@+id/windowTop"
+		>
+		</ImageView>
+		<ImageView android:id="@+id/windowBottom"
+			android:layout_width="64dip"
+			android:layout_height="64dip"
+			android:layout_centerHorizontal="true"
+			android:layout_below="@+id/windowCenter"
+		>
+		</ImageView>
+	</LinearLayout>	
+	<LinearLayout 
+		android:orientation="vertical"
+		android:layout_width="64dip"
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+	>
+	<ImageView android:id="@+id/lvcr"
+		android:layout_width="64dip"
+		android:layout_height="250dip"
+		android:layout_centerHorizontal="true"
+	>
+	</ImageView>
+	<ImageView android:id="@+id/windowRightTop"
+		android:layout_width="64dip"
+		android:layout_height="64dip"
+		android:layout_below="@+id/lvcr"
+		android:layout_toLeftOf="@id/lvcr"
+	>
+	</ImageView>
+		<ImageView android:id="@+id/windowRight"
+			android:layout_width="64dip"
+			android:layout_height="64dip"
+			android:layout_alignBottom="@+id/windowTop"
+			android:layout_below="@+id/windowRightTop"
+		>
+		</ImageView>
+		<ImageView android:id="@+id/windowRightBottom"
+			android:layout_width="64dip"
+			android:layout_height="64dip"
+			android:layout_centerHorizontal="true"
+			android:layout_below="@+id/windowRight"
+		>
+		</ImageView>
+					<ImageView android:id="@+id/damage"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_centerHorizontal="true"
+			android:layout_below="@+id/windowRightBottom"
+		>
+		</ImageView>
+	</LinearLayout>
+	</LinearLayout>
+<LinearLayout 
+  android:orientation="horizontal"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:layout_weight="1"
+>
+<ImageView
+        android:id="@+id/imageWindowViewUp"
+        android:layout_weight="0"
+	    android:layout_width="16dp"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical"
+	    android:alpha="0"
+	    >
+</ImageView>
+<LinearLayout 
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="230dip"
+  android:layout_weight="1">
+<ImageView
+        android:id="@+id/imageWindowViewUp"
+        android:layout_weight="0"
+	    android:layout_width="fill_parent"
+	    android:layout_height="140dp"
+	    android:orientation="vertical"
+	    android:alpha="0"
+	    >
+</ImageView>
+<TextView 
+		android:id="@+id/mainMes2"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:layout_weight="0"
+		android:paddingTop="10dip"
+		android:paddingLeft="10dip"
+		android:paddingRight="10dip"
+		android:textColor="#FFFFFF"
+		android:textSize="10dip"
+		android:paddingBottom="0dip"
+		android:background="@drawable/text_background"
+		android:text=""
+		android:alpha="128"
+>
+</TextView>
+<TextView 
+		android:id="@+id/logMes2"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:layout_weight="0"
+		android:paddingLeft="10dip"
+		android:paddingRight="10dip"
+		android:textColor="#FFFFFF"
+		android:textSize="10dip"
+		android:background="@drawable/text_background"
+		android:scrollbarAlwaysDrawVerticalTrack="true"
+		android:paddingTop="0dip"
+		android:text=""
+		android:alpha="128"
+>
+</TextView>
+</LinearLayout>
+<ImageView
+        android:id="@+id/imageWindowViewUp"
+        android:layout_weight="0"
+	    android:layout_width="16dp"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical"
+	    android:alpha="0"
+	    >
+</ImageView>
+</LinearLayout>
+</RelativeLayout>
